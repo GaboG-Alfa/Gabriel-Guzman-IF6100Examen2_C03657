@@ -18,6 +18,13 @@ class Test {
 	}
 	
 	@org.junit.jupiter.api.Test
+	void testGetSumaNotEquals() {
+		 OperacionAritmetica context;
+	       context = new OperacionAritmetica( new Sumar());
+		assertNotEquals(context.procesar(7, 3),6);
+	}
+	
+	@org.junit.jupiter.api.Test
 	void testGetSumaNegativo() {
 		OperacionAritmetica context;
 	       context = new OperacionAritmetica( new Sumar());
@@ -29,6 +36,13 @@ class Test {
 		 OperacionAritmetica context;
 	       context = new OperacionAritmetica( new Resta());
 		assertEquals(context.procesar(2, 1),1);
+	}
+	
+	@org.junit.jupiter.api.Test
+	void testGetRestaNotEquals() {
+		 OperacionAritmetica context;
+	       context = new OperacionAritmetica( new Resta());
+		assertNotEquals(context.procesar(9, 4),3);
 	}
 	
 	@org.junit.jupiter.api.Test
@@ -60,6 +74,13 @@ class Test {
 	}
 	
 	@org.junit.jupiter.api.Test
+	void testGetMultiplicacionNotEquals() {
+		 OperacionAritmetica context;
+	       context = new OperacionAritmetica( new Multiplicacion());
+		assertNotEquals(context.procesar(4, 4),38);
+	}
+	
+	@org.junit.jupiter.api.Test
 	void testGetMultiplicacionNegativo() {
 		OperacionAritmetica context;
 	       context = new OperacionAritmetica( new Multiplicacion());
@@ -71,6 +92,13 @@ class Test {
 		 OperacionAritmetica context;
 	       context = new OperacionAritmetica( new Division());
 		assertEquals(context.procesar(5, 1),5);
+	}
+	
+	@org.junit.jupiter.api.Test
+	void testGetDivisionNotEquals() {
+		 OperacionAritmetica context;
+	       context = new OperacionAritmetica( new Division());
+		assertNotEquals(context.procesar(12, 6),7);
 	}
 	
 	@org.junit.jupiter.api.Test
